@@ -9,18 +9,19 @@ const routes = [
   {
     path: '/vue-syntax',
     name: 'VueSyntax',
-    component: VueSyntax
-  }, {
+    component: VueSyntax,
+  },
+  {
     path: '/composition-api',
     name: 'CompositionApi',
-    component: CompositionApi
-  }
+    component: CompositionApi,
+  },
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
 })
 
 export default router

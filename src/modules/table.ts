@@ -1,5 +1,5 @@
-import {computed, Ref} from '@vue/composition-api'
-import {Selectable} from '@/types'
+import { computed, Ref } from '@vue/composition-api'
+import { Selectable } from '@/types'
 
 export default (itemsRef: Ref<Selectable[]>) => {
   const selectedFlag = computed(() => {
@@ -12,11 +12,11 @@ export default (itemsRef: Ref<Selectable[]>) => {
   })
 
   function checkAll(flag: number) {
-    itemsRef.value.forEach((operable: Selectable) => operable.selected = 2 === flag)
+    itemsRef.value.forEach((operable: Selectable) => (operable.selected = 2 === flag))
   }
 
   return {
     selectedFlag,
-    checkAll
+    checkAll,
   }
 }
