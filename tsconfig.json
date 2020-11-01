@@ -1,38 +1,43 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "es2018",
     "module": "esnext",
-    "strict": true,
-    "jsx": "preserve",
-    "importHelpers": true,
     "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "lib": ["esnext", "esnext.asynciterable", "dom"],
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "allowJs": true,
     "sourceMap": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "noEmit": true,
     "baseUrl": ".",
-    "types": [
-      "webpack-env"
-    ],
     "paths": {
-      "@/*": [
-        "src/*"
-      ]
+      "~/*": ["./*"],
+      "@/*": ["./*"]
     },
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
+    "types": [
+      "@types/node",
+      "@nuxt/types",
+      "@nuxtjs/toast",
+      "jest",
+      "vue-analytics",
+      "@nuxtjs/sentry",
+      "puppeteer",
+      "jest-environment-puppeteer",
+      "expect-puppeteer",
+      "@nuxtjs/google-analytics"
     ]
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
+    "nuxt.config.ts",
+    "./types/**/*",
+    "./store/**/*",
+    "./plugins/**/*",
+    "./utils/**/*",
+    "./services/**/*",
+    "./test/**/*",
+    "./constants/**/*"
   ]
 }
