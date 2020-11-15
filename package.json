@@ -28,7 +28,11 @@
     "@vue/composition-api": "^1.0.0-beta.18",
     "core-js": "^3.6.5",
     "eslint-plugin-vue": "^7.0.0-beta.4",
-    "nuxt": "^2.14.6"
+    "fibers": "^5.0.0",
+    "nuxt": "^2.14.6",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.1.0",
+    "vue-loader": "^15.9.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
