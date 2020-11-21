@@ -4,6 +4,8 @@ node_modules
 
 # nuxt
 .nuxt
+.nuxt-storybook
+storybook-static
 
 # local env files
 .env.local
