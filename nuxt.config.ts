@@ -44,4 +44,22 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+
+  storybook: {
+    port: 53003,
+    parameters: {
+      backgrounds: {
+        default: 'white',
+        values: [
+          { name: 'white', value: '#ffffff' },
+          { name: 'gray', value: '#aaaaaa' },
+        ],
+      },
+    },
+    addons: [
+      {
+        name: '@storybook/addon-knobs',
+      }
+    ]
+  }
 }
