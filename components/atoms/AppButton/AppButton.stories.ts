@@ -1,10 +1,25 @@
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
-import AppButton from '@/components/atoms/AppButton/AppButton.vue';
+import AppButton from '~/components/atoms/AppButton/AppButton.vue';
 
-export default {
-  title: 'AppButton',
-  decorators: [ withKnobs ]
-}
+import { storiesOf } from '@storybook/vue';
+
+storiesOf('HelloWorld', module)
+  .add('simple', () => ({
+    components: { AppButton },
+    props: {
+      isDisabled: {
+        // default: 与えるデータの型('ラベル', 初期値)
+        default: boolean('Disabled', false)
+      },
+      text: {
+        default: text('Text', 'Hello Storybook')
+      },
+      color: {
+          default: text('color', '')
+        }
+    },
+    template: `<AppButton :isDisabled="isDisabled" :color="color">{{ text }}</AppButton>`
+  }));
 
 export const NotDisablePlainButton = () => ({
   components: { AppButton },
@@ -17,7 +32,7 @@ export const NotDisablePlainButton = () => ({
       default: text('Text', 'Hello Storybook')
     },
     color: {
-        default: text('color', undefined)
+        default: text('color', '')
       }
   },
   template: `<AppButton :isDisabled="isDisabled" :color="color">{{ text }}</AppButton>`
