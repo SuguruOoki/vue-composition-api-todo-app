@@ -4,8 +4,9 @@
   </button>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
   props: {
     isDisabled: {
       type: Boolean,
@@ -16,7 +17,7 @@ export default {
       default: 'plain'
     }
   }
-}
+});
 </script>
 <style lang="scss" scoped>
 .app-button {

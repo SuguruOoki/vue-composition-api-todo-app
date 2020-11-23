@@ -25,9 +25,21 @@
     },
     "types": [
       "@types/node",
-      "@nuxt/types"
+      "@nuxt/types",
+      "@types/jest"
     ]
   },
+  "include": [
+    "components/**/*.ts",
+    "components/**/*.vue",
+    "middleware/**/*.ts",
+    "plugins/**/*.ts",
+    "layouts/**/*.ts",
+    "layouts/**/*.vue",
+    "pages/**/*.ts",
+    "pages/**/*.vue",
+    "test/**/*.ts"
+  ],
   "exclude": [
     "node_modules",
     ".nuxt",

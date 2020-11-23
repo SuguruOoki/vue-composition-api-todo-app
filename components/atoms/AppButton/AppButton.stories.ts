@@ -1,7 +1,7 @@
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/vue';
 import AppButton from '~/components/atoms/AppButton/AppButton.vue';
 
-import { storiesOf } from '@storybook/vue';
 
 storiesOf('HelloWorld', module)
   .add('simple', () => ({
